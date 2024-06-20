@@ -43,13 +43,13 @@ export function InventoryContextProvider({ children }: InventoryContextProviderP
 
   useEffect(() => {
     api
-      .get(`http://localhost:3333/inventorys${search}`)
+      .get(`http://192.168.15.141:5175/inventorys${search}`)
       .then((response) => setItems(response.data)); 
   }, [search]);
   
 
   function createNewItem (item: CreateNewItem)  {
-    api.post("http://localhost:3333/inventorys", item);
+    api.post("http://192.168.15.141:5175/inventorys", item);
 
     window.location.reload();
   }

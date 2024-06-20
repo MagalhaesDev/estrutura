@@ -12,8 +12,9 @@ app.register(inventoryRoutes)
 
 app
   .listen({
-    port: 3333,
+    port: 5175,
+    host: '192.168.15.141',
   })
   .then(() => {
-    console.log('HTTP server running on http://localhost:3333')
+    console.log('HTTP server running on http://192.168.15.141:5175')
   })
